@@ -24,7 +24,7 @@ class Contract:
 
     def validate_debt(self, debt):
         if not isinstance(debt, int) and not isinstance(debt, float) or debt <= 0:
-            raise ValueError(f'The variable \'debt\' have to be a positive integer and/or float.{debt}')
+            raise ValueError(f'The variable \'debt\' have to be a positive integer or float.{debt}')
         return debt
 
 
@@ -42,28 +42,3 @@ class Contracts:
         top_N_open_contracts = [x.id for x in debtor_list][:top_n]
 
         return top_N_open_contracts
-
-
-
-'''Testes'''
-
-contracts = [
-    Contract(1, 100),
-    Contract(2, 200),
-    Contract(3, 300),
-    Contract(4, 400),
-    Contract(5, 500),
-    # Contract('a', 700),
-    # Contract(8, 120),
-    # Contract('b', 20),
-    # Contract('Rubble', -10000),
-    # # Contract('', 2000000),
-]
-renegotiated = [3]
-top_n = 3
-
-actual_open_contracts = Contracts.get_top_N_open_contracts(contracts, renegotiated, top_n)
-print(actual_open_contracts)
-
-expected_open_contracts = [5, 4, 2]
-# assert expected_open_contracts == actual_open_contracts

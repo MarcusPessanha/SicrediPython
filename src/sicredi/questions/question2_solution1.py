@@ -1,5 +1,5 @@
 from typing import List
-from log import log_debug
+from ..log.log import log_debug
 
 
 class Orders:
@@ -14,7 +14,7 @@ class Orders:
         x = [x for x in requests if type(x) != int or x > n_max or x <= 0]
         if x:
             raise ValueError('Only positive integers less than or equal '
-            f'to \'n_max\' are allowed in the request list. Not accepted: {x}')
+                            f'to \'n_max\' are allowed in the request list. Not accepted: {x}')
 
     @staticmethod
     def combine_orders(requests: List[int], n_max: int) -> int:        
@@ -59,36 +59,3 @@ class Orders:
         number_trips = len(trips_list)
         log_debug(f'number_trips: {number_trips}')
         return number_trips
-
-
-
-'''Testes'''
-
-n_max = 100
-orders = [70, 30, 10]
-# orders = ['met', 30, 10]
-# orders = [70, 30, 10]
-# orders = [10, 50, 5, 40, 100, 80, 34, 10, 2, 50, 73, 87, 2, 1, 2]
-# orders = [10, 50, 5, 40, 100, 80, 34, 10, 2, 50, 73, 87, 2, 1, -2]
-# orders = [10, 50, 5, 40]
-# orders = []
-# orders = '1'
-# orders = [70, 30, 10.0]
-# orders = [70, 30, 10, 110]
-# orders = [70, 30, 10, 0]
-
-# import random 
-# orders = [random.randint(1, 100) for i in range(500)]
-n_max = 100
-expected_orders = 2
-
-how_many = Orders().combine_orders(orders, n_max)
-print(f'how_many: {how_many}')
-# assert how_many == expected_orders
-
-
-# TODO - testes 
-# TODO - comentar o código
-# TODO - fazer documentação explicando as soluções
-# TODO - decorator para registrar performance em diferentes cenários 
-# TODO - organizar
