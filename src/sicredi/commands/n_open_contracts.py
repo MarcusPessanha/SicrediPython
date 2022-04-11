@@ -16,7 +16,13 @@ def cli_n_open_contracts(top_n, open_contracts, renegotiated_contracts):
     Returns the IDs of the <n> largest debtors. \n
     <top_n> an integer containing the required number of debtors.\n
     <open_contracts> monthly list of clients and their debts.\n
-    <renegotiated_contracts> list with the id(s) of customers who renegotiated their contract. 
+        Example:\n
+        --open_contracts [[1,1],[2,2],[3,3],[4,4],[5,5]]\n
+    <renegotiated_contracts> list with the id(s) of customers who renegotiated their contract.\n
+        Example:\n
+        --renegotiated_contracts [3]\n
+    Command Example:\n 
+        python main.py n-open-contracts 3 --open_contracts [[1,1],[2,2],[3,3],[4,4],[5,5]] --renegotiated_contracts [3]
     """
 
     top_n, open_contracts, renegotiated_contracts = InputValidator.validator_n_open_contracts(top_n, open_contracts, renegotiated_contracts)

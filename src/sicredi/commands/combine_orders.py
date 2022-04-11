@@ -11,7 +11,10 @@ def cli_combine_orders(n_max, orders):
     """
     Returns the minimum amount of trips to fulfill all <orders>.\n
     <n_max> an integer containing the maximum value that can be taken in a single trip.\n
-    <orders> list of monetary values for each order.
+    <orders> list of monetary values for each order.\n
+        Example: --orders [70, 30, 10]\n
+    Command Example:\n 
+        python main.py combine-orders 100 --orders [70,30,10]
     """
 
     n_max, orders = InputValidator().validator_combine_orders(n_max, orders)
