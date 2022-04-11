@@ -24,10 +24,10 @@ python main.py n-open-contracts --help
 # Solutions
 ## Question 1
 ```cmd
-python main.py combine-orders 100 --orders [70,30,10]
+python main.py n-open-contracts 3 --open_contracts [[1,1],[2,2],[3,3],[4,4],[5,5]] --renegotiated_contracts [3]
 ```
 
 ## Question 2
 ```cmd
-python main.py n-open-contracts 3 --open_contracts [[1,1],[2,2],[3,3],[4,4],[5,5]] --renegotiated_contracts [3]
+python main.py combine-orders 100 --orders [70,30,10]
 ```
