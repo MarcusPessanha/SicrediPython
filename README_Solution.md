@@ -21,8 +21,10 @@ python main.py combine-orders --help
 python main.py n-open-contracts --help
 ```
 ## First Steps - Unit Tests
+```cmd
+cd src
 python -m pytest -v
-
+```
 # Solutions
 ## Question 1
 ```cmd
