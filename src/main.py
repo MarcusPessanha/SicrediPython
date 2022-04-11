@@ -9,6 +9,9 @@ from sicredi.commands.n_open_contracts import cli_n_open_contracts
 @click.group(context_settings=settings.CONTEXT_SETTINGS)
 @click.version_option(version=settings.VERSION)
 def cli():
+    """
+    Teste Sicredi Python.
+    """
     pass
 
 @click.command()

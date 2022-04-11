@@ -17,7 +17,7 @@ class InputValidator():
         if not isinstance(orders, list) and not isinstance(orders, tuple):
                 raise click.BadParameter(f'{orders} is not a valid list of positive integer(s).')
 
-        x = [x for x in orders if x <=0]
+        x = [x for x in orders if isinstance(x, str) or x <= 0]
         if x:
             raise click.BadParameter(f'{orders} is not a valid list of positive integer(s).')
 

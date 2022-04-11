@@ -20,6 +20,8 @@ python main.py --help
 python main.py combine-orders --help
 python main.py n-open-contracts --help
 ```
+## First Steps - Unit Tests
+python -m pytest -v
 
 # Solutions
 ## Question 1
