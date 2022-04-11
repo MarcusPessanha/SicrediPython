@@ -13,11 +13,17 @@ def cli():
 
 @click.command()
 def initdb():
-    click.echo('Initialized the database')
+    """
+    Connect db.
+    """
+    click.echo('not working yet')
 
 @click.command()
 def dropdb():
-    click.echo('Dropped the database')
+    """
+    Drop db.
+    """
+    click.echo('not working yet')
 
 
 cli.add_command(initdb, name='iniciar-db')
